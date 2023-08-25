@@ -1,0 +1,19 @@
+@import "../../../assets/styles/theme";
+
+.video-card {
+    display: grid;
+    grid-template-rows: 300px 80px;
+    background: #f4f4f4;
+    box-shadow: 0 0 8px #e5e9ef;
+    .video-body {
+        height: 300px;
+        width: 100%;
+        background: black;
+        object-position: center;
+    }
+    .video-footer {
+
+    }
+}
+
+

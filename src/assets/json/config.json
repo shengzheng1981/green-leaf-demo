@@ -1,0 +1,230 @@
+{
+    "app": {
+        "name": "Green GIS",
+        "title": "Green GIS",
+        "version": "1.0.0"
+    },
+    "map": {
+        "type": "amap",
+        "center": {
+            "lng": 107.857488,
+            "lat": 34.269616
+        },
+        "zoom": 5
+    },
+    "menus": [
+        {
+            "name": "Overview",
+            "router": "/dashboard"
+        },
+        {
+            "name": "Doc",
+            "router": "/document"
+        },
+        {
+            "name": "Demo",
+            "router": "",
+            "icon": "",
+            "children": [
+                {
+                    "name": "Basic",
+                    "code": "GG",
+                    "router": "/basic",
+                    "icon": ""
+                },
+                {
+                    "name": "Layer",
+                    "code": "GG",
+                    "router": "",
+                    "icon": "",
+                    "children": [
+                        {
+                            "name": "Graphic Layer",
+                            "code": "GG",
+                            "router": "/layer/graphic",
+                            "icon": ""
+                        },
+                        {
+                            "name": "Feature Layer",
+                            "code": "GG",
+                            "router": "/layer/feature",
+                            "icon": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Projection",
+                    "code": "GG",
+                    "router": "",
+                    "icon": "",
+                    "children": [
+                        {
+                            "name": "AMap(Gaode)",
+                            "code": "GG",
+                            "router": "/projection/amap",
+                            "icon": ""
+                        },
+                        {
+                            "name": "BMap(Baidu)",
+                            "code": "GG",
+                            "router": "/projection/bmap",
+                            "icon": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Renderer",
+                    "code": "GG",
+                    "router": "",
+                    "icon": "",
+                    "children": [
+                        {
+                            "name": "Simple Renderer",
+                            "code": "GG",
+                            "router": "/renderer/simple",
+                            "icon": ""
+                        },
+                        {
+                            "name": "Category Renderer",
+                            "code": "GG",
+                            "router": "/renderer/category",
+                            "icon": ""
+                        },
+                        {
+                            "name": "Class Renderer",
+                            "code": "GG",
+                            "router": "/renderer/class",
+                            "icon": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Label",
+                    "code": "GG",
+                    "router": "",
+                    "icon": "",
+                    "children": [
+                        {
+                            "name": "Simple Label",
+                            "code": "GG",
+                            "router": "/label/simple",
+                            "icon": ""
+                        },
+                        {
+                            "name": "Distance Collision",
+                            "code": "GG",
+                            "router": "/label/distance",
+                            "icon": ""
+                        },
+                        {
+                            "name": "Cover Collision",
+                            "code": "GG",
+                            "router": "/label/cover",
+                            "icon": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Cluster",
+                    "code": "GG",
+                    "router": "/cluster",
+                    "icon": ""
+                },
+                {
+                    "name": "Symbol",
+                    "code": "GG",
+                    "router": "",
+                    "icon": "",
+                    "children": [
+                        {
+                            "name": "Simple Symbol",
+                            "code": "GG",
+                            "router": "/symbol/point",
+                            "icon": ""
+                        },
+                        {
+                            "name": "Marker Symbol",
+                            "code": "GG",
+                            "router": "/symbol/marker",
+                            "icon": ""
+                        },
+                        {
+                            "name": "Letter Symbol",
+                            "code": "GG",
+                            "router": "/symbol/letter",
+                            "icon": ""
+                        },
+                        {
+                            "name": "Arrow Symbol",
+                            "code": "GG",
+                            "router": "/symbol/arrow",
+                            "icon": ""
+                        },
+                        {
+                            "name": "Custom Symbol",
+                            "code": "GG",
+                            "router": "/symbol/custom",
+                            "icon": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Tile",
+                    "code": "GG",
+                    "router": "/tile",
+                    "icon": ""
+                },
+                {
+                    "name": "Analysis",
+                    "code": "GG",
+                    "router": "",
+                    "icon": "",
+                    "children": [
+                        {
+                            "name": "IDW",
+                            "code": "GG",
+                            "router": "/analysis/idw",
+                            "icon": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Animation",
+                    "code": "GG",
+                    "router": "",
+                    "icon": "",
+                    "children": [
+                        {
+                            "name": "Point Animation",
+                            "code": "GG",
+                            "router": "/animation/point",
+                            "icon": ""
+                        },
+                        {
+                            "name": "Line Animation",
+                            "code": "GG",
+                            "router": "/animation/line",
+                            "icon": ""
+                        },
+                        {
+                            "name": "Particle Animation",
+                            "code": "GG",
+                            "router": "/animation/particle",
+                            "icon": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Lesson",
+            "router": "/lesson",
+            "icon": ""
+        },
+        {
+            "name": "Sandbox",
+            "router": "/sandbox",
+            "icon": ""
+        }
+    ]
+}

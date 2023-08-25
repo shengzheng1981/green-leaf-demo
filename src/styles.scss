@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+//== Ant
+//@import "../node_modules/ng-zorro-antd/ng-zorro-antd.min.css";
+//@import '../node_modules/font-awesome/css/font-awesome.css';
+//== codemirror
+@import '../node_modules/codemirror/lib/codemirror.css';
+//== green
+@import '../node_modules/green-gis/style/green.css';
+//== Bootstrap
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+//== FontAwesome
+@import "../node_modules/@fortawesome/fontawesome-free/css/all.css";
+@import "./assets/styles/iconfont/iconfont.css";
+//== Theme
+@import "./assets/styles/theme.scss";
+//== Application
+@import "./assets/styles/app.scss";
+//== custom
+@import "./assets/styles/common.scss";

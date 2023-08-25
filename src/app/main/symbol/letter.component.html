@@ -1,0 +1,36 @@
+<div class="system-content" style="grid-template-columns: 1fr">
+    <div class="system-body" >
+        <green-map-control (mapInit)="mapInit($event)"></green-map-control>
+        <div class="panel" style="position: absolute; top: 15px; right: 15px; z-index: 1000;">
+            <div class="panel-heading">
+                <div class="panel-title">配置</div>
+            </div>
+            <div class="panel-body" style="display: grid; grid-template-columns: 1fr 1fr; grid-gap: 10px; width: 540px" *ngIf="option">
+                <div class="input-group">
+                    <div class="input-group-addon">边框色：</div>
+                    <input class="form-control" type="color" name="strokeColor" [(ngModel)]="option.strokeStyle"  (ngModelChange)="change()">
+                </div>
+                <div class="input-group">
+                    <div class="input-group-addon">填充色：</div>
+                    <input class="form-control" type="color" name="fillColor" [(ngModel)]="option.fillStyle"  (ngModelChange)="change()">
+                </div>
+                <div class="input-group">
+                    <div class="input-group-addon">字体颜色：</div>
+                    <input class="form-control" type="color" name="fontColor" [(ngModel)]="option.fontColor"  (ngModelChange)="change()">
+                </div>
+                <div class="input-group">
+                    <div class="input-group-addon">字体大小：</div>
+                    <input class="form-control" type="number" name="fontSize" [(ngModel)]="option.fontSize"  autocomplete="off" (ngModelChange)="change()" min="8" [max]="18" step="1">
+                </div>
+                <div class="input-group">
+                    <div class="input-group-addon">半径：</div>
+                    <input class="form-control" type="number" name="radius" [(ngModel)]="option.radius"  autocomplete="off" (ngModelChange)="change()" min="4" [max]="20" step="1">
+                </div>
+                <div class="input-group">
+                    <div class="input-group-addon">字母：</div>
+                    <input class="form-control" type="string" name="letter" [(ngModel)]="option.letter"  autocomplete="off" (ngModelChange)="change()">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

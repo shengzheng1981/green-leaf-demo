@@ -1,0 +1,16 @@
+<div class="system-content" style="grid-template-columns: 1fr">
+    <div class="system-body" >
+        <green-map-control (mapInit)="mapInit($event)"></green-map-control>
+        <div class="panel" style="position: absolute; top: 15px; right: 15px; z-index: 1000;">
+            <div class="panel-heading">
+                <div class="panel-title">配置</div>
+            </div>
+            <div class="panel-body" style="display: grid; grid-template-columns: 1fr 1fr; grid-gap: 10px; width: 540px">
+                <div class="input-group" style="text-align: center;">
+                    <div class="input-group-addon">聚合：</div>
+                    <nz-switch class="form-control" [(ngModel)]="option.cluster" (ngModelChange)="switch()"></nz-switch>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

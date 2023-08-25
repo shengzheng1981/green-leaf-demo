@@ -1,0 +1,43 @@
+<div class="system-content">
+    <div class="system-left">
+        <ul nz-menu nzMode="inline">
+            <ng-container *ngFor="let doc of docs">
+                <li nz-menu-item *ngIf="!doc.children">{{doc.title}}</li>
+                <li nz-submenu *ngIf="doc.children" [nzTitle]="doc.title">
+                    <ul>
+                        <li nz-menu-item *ngFor="let child of doc.children" (click)="change(child)">{{child.title}}</li>
+                    </ul>
+                </li>
+            </ng-container>
+        </ul>
+    </div>
+    <div class="system-body" style="padding: 15px; display: grid; grid-gap: 10px; grid-template-columns: 1fr auto;">
+        <div #container class="system-body-article" style="height: 100%; overflow-y: auto;">
+            <!--<article #markdown>
+                <section id="Start" style="height: 400px;">
+                    <h3>Start</h3>
+                </section>
+                <section id="Index" style="height: 400px;">
+                    <h3>Index</h3>
+                </section>
+                <section id="Command" style="height: 400px;">
+                    <h3>Command</h3>
+                </section>
+                <section id="Remark" style="height: 400px;">
+                    <h3>Remark</h3>
+                </section>
+            </article>-->
+            <div #markdown>
+
+            </div>
+        </div>
+        <div class="system-body-anchor">
+            <!--<nz-anchor [nzContainer]="markdown">
+                <nz-link nzHref="document#Start" nzTitle="Start"></nz-link>
+                <nz-link nzHref="document#Index" nzTitle="Index"></nz-link>
+                <nz-link nzHref="document#Command" nzTitle="Command"></nz-link>
+                <nz-link nzHref="document#Remark" nzTitle="Remark"></nz-link>
+            </nz-anchor>-->
+        </div>
+    </div>
+</div>

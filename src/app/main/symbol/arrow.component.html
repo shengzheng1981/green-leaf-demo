@@ -1,0 +1,33 @@
+<div class="system-content" style="grid-template-columns: 1fr">
+    <div class="system-body" >
+        <green-map-control (mapInit)="mapInit($event)"></green-map-control>
+        <div class="panel" style="position: absolute; top: 15px; right: 15px; z-index: 1000;">
+            <div class="panel-heading">
+                <div class="panel-title">配置</div>
+            </div>
+            <div class="panel-body" style="display: grid; grid-template-columns: 1fr 1fr; grid-gap: 10px; width: 540px" *ngIf="option">
+                <div class="input-group" style="text-align: center;">
+                    <div class="input-group-addon">显示：</div>
+                    <nz-switch class="form-control" [(ngModel)]="option.visible" (ngModelChange)="change()"></nz-switch>
+                </div>
+                <div class="input-group"></div>
+                <div class="input-group">
+                    <div class="input-group-addon">颜色：</div>
+                    <input class="form-control" type="color" name="strokeColor" [(ngModel)]="option.strokeStyle"  (ngModelChange)="change()">
+                </div>
+                <div class="input-group">
+                    <div class="input-group-addon">线宽：</div>
+                    <input class="form-control" type="number" name="lineWidth" [(ngModel)]="option.lineWidth"  autocomplete="off" (ngModelChange)="change()" min="1" [max]="8" step="1">
+                </div>
+                <div class="input-group">
+                    <div class="input-group-addon">翼长：</div>
+                    <input class="form-control" type="number" name="arrowLength" [(ngModel)]="option.arrowLength"  autocomplete="off" (ngModelChange)="change()" min="4" [max]="20" step="1">
+                </div>
+                <div class="input-group">
+                    <div class="input-group-addon" nz-tooltip nzTitle="显示箭头的最短线长">最短线长：</div>
+                    <input class="form-control" type="number" name="minLength" [(ngModel)]="option.minLength"  autocomplete="off" (ngModelChange)="change()" min="30" [max]="100" step="1">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

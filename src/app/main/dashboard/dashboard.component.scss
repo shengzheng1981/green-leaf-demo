@@ -1,0 +1,54 @@
+@import "../../../assets/styles/theme";
+
+.dashboard-wrapper{
+    height: 100%;
+    width: 100%;
+    background-color: #ffffff;
+    display: grid;
+    grid-template-rows: 1fr auto;
+
+    .dashboard-body{
+        padding: 10px;
+        height: 100%;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 0.618fr 0.382fr;
+        grid-template-areas: 'a b';
+        .area-a {
+            grid-area: a;
+            padding: 50px;
+            display: grid;
+            grid-template-rows: 1fr auto auto auto auto 1fr;
+        }
+        .area-b {
+            grid-area: b;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 10px;
+            box-shadow: rgba(255, 255, 255, 0.3) 2px 2px;
+        }
+    }
+
+    .dashboard-foot{
+        height: 50px;
+        display: grid;
+        align-items: center;
+        justify-items: center;
+        background-color: #ffffff;
+        & > a {
+            font-family: 'Arial Normal', 'Arial';
+            font-weight: 400;
+            font-style: normal;
+            font-size: 15px;
+            color: $color-font;
+        }
+    }
+}
+
+[nz-carousel-content] {
+    text-align: center;
+    height: 160px;
+    line-height: 160px;
+    background: rgba(255, 255, 255, 0.5);
+    color: $color-primary;
+    overflow: hidden;
+}

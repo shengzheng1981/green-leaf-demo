@@ -1,0 +1,19 @@
+.empty {
+	display: grid;
+	align-items: center;
+	justify-items: center;
+	height: 100%;
+}
+
+.empty .empty-icon {
+	font-size: 56px;
+	color: lightgray;
+	display: block;
+}
+
+.empty .empty-description {
+	font-size: 16px;
+	color: lightgray;
+	display: block;
+	margin-top: 20px;
+}

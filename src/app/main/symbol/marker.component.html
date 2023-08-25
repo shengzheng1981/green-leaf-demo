@@ -1,0 +1,28 @@
+<div class="system-content" style="grid-template-columns: 1fr">
+    <div class="system-body" >
+        <green-map-control (mapInit)="mapInit($event)"></green-map-control>
+        <div class="panel" style="position: absolute; top: 15px; right: 15px; z-index: 1000;">
+            <div class="panel-heading">
+                <div class="panel-title">配置</div>
+            </div>
+            <div class="panel-body" style="display: grid; grid-template-columns: 1fr 1fr; grid-gap: 10px; width: 540px" *ngIf="option">
+                <div class="input-group">
+                    <div class="input-group-addon">宽度：</div>
+                    <input class="form-control" type="number" name="width" [(ngModel)]="option.width"  autocomplete="off" (ngModelChange)="change()" min="4" [max]="64" step="1">
+                </div>
+                <div class="input-group">
+                    <div class="input-group-addon">高度：</div>
+                    <input class="form-control" type="number" name="height" [(ngModel)]="option.height"  autocomplete="off" (ngModelChange)="change()" min="4" [max]="64" step="1">
+                </div>
+                <div class="input-group">
+                    <div class="input-group-addon">X偏移：</div>
+                    <input class="form-control" type="number" name="offsetX" [(ngModel)]="option.offsetX"  autocomplete="off" (ngModelChange)="change()" min="-64" [max]="64" step="1">
+                </div>
+                <div class="input-group">
+                    <div class="input-group-addon">Y偏移：</div>
+                    <input class="form-control" type="number" name="offsetY" [(ngModel)]="option.offsetY"  autocomplete="off" (ngModelChange)="change()" min="-64" [max]="64" step="1">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

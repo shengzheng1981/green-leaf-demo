@@ -1,0 +1,28 @@
+<div class="system-content" style="grid-template-columns: 1fr">
+    <div class="system-body" >
+        <green-map-control (mapInit)="mapInit($event)"></green-map-control>
+        <div class="panel" style="position: absolute; top: 15px; right: 15px; z-index: 1000;">
+            <div class="panel-heading">
+                <div class="panel-title">配置</div>
+            </div>
+            <div class="panel-body" style="display: grid; grid-template-columns: 1fr 1fr; grid-gap: 10px; width: 540px" *ngIf="animation">
+                <div class="input-group">
+                    <div class="input-group-addon">起始色：</div>
+                    <input class="form-control" type="color" name="color" [(ngModel)]="animation.startColor"  (ngModelChange)="change()">
+                </div>
+                <div class="input-group">
+                    <div class="input-group-addon">终止色：</div>
+                    <input class="form-control" type="color" name="color" [(ngModel)]="animation.endColor"  (ngModelChange)="change()">
+                </div>
+                <div class="input-group">
+                    <div class="input-group-addon">线宽：</div>
+                    <input class="form-control" type="number" name="width" [(ngModel)]="animation.lineWidth"  autocomplete="off" (ngModelChange)="change()" min="2" [max]="8" step="1">
+                </div>
+                <div class="input-group">
+                    <div class="input-group-addon">弧度(rad)：</div>
+                    <input class="form-control" type="number" name="angle" [(ngModel)]="animation.angle"  autocomplete="off" (ngModelChange)="change()" min="0" [max]="1" step="0.1">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

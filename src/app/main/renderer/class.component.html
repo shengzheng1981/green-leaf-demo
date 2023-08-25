@@ -1,0 +1,33 @@
+<div class="system-content" style="grid-template-columns: 1fr">
+    <div class="system-body" >
+        <green-map-control (mapInit)="mapInit($event)"></green-map-control>
+        <div class="panel" style="position: absolute; top: 15px; right: 15px; z-index: 1000;">
+            <div class="panel-heading">
+                <div class="panel-title">配置</div>
+            </div>
+            <div class="panel-body" style="display: grid; grid-template-columns: 1fr 1fr 1fr; grid-gap: 10px; width: 540px" *ngIf="option">
+                <div class="input-group" style="text-align: center;">
+                    <div class="input-group-addon">显示：</div>
+                    <nz-switch class="form-control" [(ngModel)]="option.visible" (ngModelChange)="change()"></nz-switch>
+                </div>
+                <div class="input-group"></div>
+                <div class="input-group"></div>
+                <ng-container *ngFor="let item of this.renderer?.items">
+                    <div class="input-group">
+                        <div class="input-group-addon" style="width: 45px">分类：</div>
+                        <input class="form-control" [ngModel]="item.label" readonly/>
+                    </div>
+                    <div class="input-group" *ngIf="item.symbol">
+                        <div class="input-group-addon" style="width: 100px">边框色：</div>
+                        <input class="form-control" type="color" [name]="item.value + 'strokeColor'" [(ngModel)]="item.symbol.strokeStyle"  (ngModelChange)="change()">
+                    </div>
+                    <div class="input-group" *ngIf="item.symbol">
+                        <div class="input-group-addon" style="width: 100px">填充色：</div>
+                        <input class="form-control" type="color" [name]="item.value + 'fillColor'" [(ngModel)]="item.symbol.fillStyle"  (ngModelChange)="change()">
+                    </div>
+                </ng-container>
+
+            </div>
+        </div>
+    </div>
+</div>

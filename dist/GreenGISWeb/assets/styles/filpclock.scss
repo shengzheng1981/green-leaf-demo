@@ -1,0 +1,28 @@
+.flip-clock-wrapper{
+  margin:0px;
+}
+.flip-clock-wrapper ul{
+  margin: 1px;
+  width: 20px;
+  height: 30px;
+  font-size: 24px;
+  line-height: 27px;
+  border-radius: 6px;
+  padding-left: 0px;
+}
+.flip-clock-wrapper ul li {
+  line-height: 27px;
+}
+.flip-clock-wrapper ul li a div div.inn{
+  font-size: 24px;
+}
+.flip-clock-divider{
+  width: 5px;
+  height: 30px;
+}
+.flip-clock-label{
+  display: none;
+}
+.flip-clock-dot{
+  display: none;
+}

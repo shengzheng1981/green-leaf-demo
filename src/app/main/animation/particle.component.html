@@ -1,0 +1,28 @@
+<div class="system-content" style="grid-template-columns: 1fr">
+    <div class="system-body" >
+        <green-map-control (mapInit)="mapInit($event)"></green-map-control>
+        <div class="panel" style="position: absolute; top: 15px; right: 15px; z-index: 1000;">
+            <div class="panel-heading">
+                <div class="panel-title">配置</div>
+            </div>
+            <div class="panel-body" style="display: grid; grid-template-columns: 1fr 1fr; grid-gap: 10px; width: 540px" *ngIf="animation">
+                <div class="input-group">
+                    <div class="input-group-addon">颜色：</div>
+                    <input class="form-control" type="color" name="color" [(ngModel)]="animation.color"  (ngModelChange)="change()">
+                </div>
+                <div class="input-group">
+                    <div class="input-group-addon">轨道半径：</div>
+                    <input class="form-control" type="number" name="radius" [(ngModel)]="animation.radius"  autocomplete="off" (ngModelChange)="change()" min="20" [max]="80" step="1">
+                </div>
+                <div class="input-group">
+                    <div class="input-group-addon">环绕速度：</div>
+                    <input class="form-control" type="number" name="speed" [(ngModel)]="animation.speed"  autocomplete="off" (ngModelChange)="change()" min="5" [max]="20" step="1">
+                </div>
+                <div class="input-group">
+                    <div class="input-group-addon">粒子数：</div>
+                    <input class="form-control" type="number" name="count" [(ngModel)]="animation.count"  autocomplete="off" (ngModelChange)="change()" min="5" [max]="50" step="1">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

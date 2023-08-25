@@ -1,0 +1,22 @@
+
+/* select mask */
+.cdk-overlay-container {
+    z-index :1050!important;   /*  dialog mask 1040 */
+}
+
+/* dropdown-menu */
+.ant-dropdown-menu-item, .ant-dropdown-menu-submenu-title{
+    padding: 10px 20px !important;
+}
+.ant-dropdown-menu {
+    padding: 5px 0px !important;
+    min-width: 180px !important;
+}
+.ant-dropdown-menu-item:hover, .ant-dropdown-menu-submenu-title:hover {
+    background-color: #f3f3f3 !important;
+}
+
+/* calendar */
+.ant-fullcalendar-header{
+    display: none;
+}

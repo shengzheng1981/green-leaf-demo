@@ -1,0 +1,50 @@
+<div class="layout-wrapper">
+    <div class="layout-header no-select">
+        <div class="left">
+            <img class="app-logo" src="assets/img/logo.svg">
+            <span class="title">Green Leaf</span>
+        </div>
+        <div class="center no-select">
+            <!-- <div class="center-left">
+            </div>
+            <div class="center-body" *ngIf="menus">
+                <ng-container *ngFor="let head of menus">
+                    <div nz-dropdown [nzDropdownMenu]="dropDownMenu" [routerLink]="head.router" class="menu-item" [ngClass]="{'active': head.active}">
+                        <span>{{head.name}}</span>
+                    </div>
+                    <nz-dropdown-menu #dropDownMenu="nzDropdownMenu">
+                        <ul nz-menu class="menu-list">
+                            <ng-container *ngFor="let menu of head?.children; let i = index">
+                                <ng-container>
+                                    <li *ngIf="i !== 0" nz-menu-divider></li>
+                                    <li *ngIf="menu.children && menu.children.length > 0" nz-submenu [nzTitle]="menu.name" [routerLink]="menu.router" [ngClass]="{'menu-item-active': menu.active}">
+                                        <ul class="menu-list">
+                                            <ng-container *ngFor="let sub_menu of menu.children; let j = index">
+                                                <ng-container>
+                                                    <li *ngIf="j !== 0" nz-menu-divider></li>
+                                                    <li nz-menu-item [ngClass]="{'menu-item-active': sub_menu.active}">
+                                                        <a [routerLink]="sub_menu.router">
+                                                            <span class="iconfont menu-item-icon" [ngClass]="sub_menu.icon"></span>{{sub_menu.name}}
+                                                        </a>
+                                                    </li>
+                                                </ng-container>
+                                            </ng-container>
+                                        </ul>
+                                    </li>
+                                    <li *ngIf="!menu.children || menu.children.length === 0" nz-menu-item [ngClass]="{'menu-item-active': menu.active}" [routerLink]="menu.router">{{menu.name}}</li>
+                                </ng-container>
+                            </ng-container>
+                        </ul>
+                    </nz-dropdown-menu>
+                </ng-container>
+            </div>
+            <div class="center-right">
+
+            </div> -->
+        </div>
+    </div>
+    <div class="layout-body">
+        <router-outlet></router-outlet>
+    </div>
+</div>
+

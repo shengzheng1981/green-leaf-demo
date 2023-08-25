@@ -1,0 +1,54 @@
+<div class="system-content" style="grid-template-columns: 1fr">
+    <div class="system-body" >
+        <green-map-control (mapInit)="mapInit($event)"></green-map-control>
+        <div class="panel" style="position: absolute; top: 15px; right: 15px; z-index: 1000;">
+            <div class="panel-heading">
+                <div class="panel-title">配置</div>
+            </div>
+            <div class="panel-body" style="display: grid; grid-template-columns: 1fr 1fr; grid-gap: 10px; width: 540px">
+                <div class="input-group" style="text-align: center;">
+                    <div class="input-group-addon">标注：</div>
+                    <nz-switch class="form-control" [(ngModel)]="option.labeled" (ngModelChange)="switch()"></nz-switch>
+                </div>
+                <div class="input-group"></div>
+                <div class="input-group">
+                    <div class="input-group-addon">边框色：</div>
+                    <input class="form-control" type="color" name="strokeColor" [(ngModel)]="option.label.strokeStyle"  (ngModelChange)="change()">
+                </div>
+                <div class="input-group">
+                    <div class="input-group-addon">填充色：</div>
+                    <input class="form-control" type="color" name="fillColor" [(ngModel)]="option.label.fillStyle"  (ngModelChange)="change()">
+                </div>
+                <div class="input-group">
+                    <div class="input-group-addon">字体颜色：</div>
+                    <input class="form-control" type="color" name="fontColor" [(ngModel)]="option.label.fontColor"  (ngModelChange)="change()">
+                </div>
+                <div class="input-group">
+                    <div class="input-group-addon">字体大小：</div>
+                    <input class="form-control" type="number" name="fontSize" [(ngModel)]="option.label.fontSize"  autocomplete="off" (ngModelChange)="change()" min="8" max="20" step="1">
+                </div>
+                <div class="input-group">
+                    <div class="input-group-addon">标注方位：</div>
+                    <select class="form-control" name="placement" [(ngModel)]="option.label.placement" (ngModelChange)="change()">
+                        <option value="TOP">TOP</option>
+                        <option value="BOTTOM">BOTTOM</option>
+                        <option value="LEFT">LEFT</option>
+                        <option value="RIGHT">RIGHT</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <div class="input-group-addon">周边留白：</div>
+                    <input class="form-control" type="number" name="padding" [(ngModel)]="option.label.padding"  autocomplete="off" (ngModelChange)="change()" min="2" max="10" step="1">
+                </div>
+                <div class="input-group">
+                    <div class="input-group-addon">X偏移：</div>
+                    <input class="form-control" type="number" name="offsetX" [(ngModel)]="option.label.offsetX"  autocomplete="off" (ngModelChange)="change()" min="0" max="20" step="1">
+                </div>
+                <div class="input-group">
+                    <div class="input-group-addon">Y偏移：</div>
+                    <input class="form-control" type="number" name="offsetY" [(ngModel)]="option.label.offsetY"  autocomplete="off" (ngModelChange)="change()" min="0" max="20" step="1">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

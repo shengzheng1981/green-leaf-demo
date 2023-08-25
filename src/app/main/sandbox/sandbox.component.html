@@ -1,0 +1,26 @@
+<div class="system-content" style="grid-template-columns: 1fr">
+    <div class="system-body" style="display: grid; grid-template-columns: 1fr 2fr 3fr;">
+        <ul nz-menu nzMode="inline" style="overflow-y: auto; overflow-x: hidden;">
+            <li nz-submenu *ngFor="let group of scripts" [nzTitle]="group.title" [nzOpen]="group.open">
+                <ul>
+                    <li nz-menu-item *ngFor="let item of group.items" [nzSelected]="item.selected" (click)="change(item.script)">{{item.title}}</li>
+                </ul>
+            </li>
+        </ul>
+        <div class="panel panel-grid" style="height: 100%; width: 100%; padding: 10px;">
+            <div class="panel-heading" style="display: grid; grid-template-columns: 1fr auto">
+                <div class="panel-title">源码</div>
+                <div class="panel-action">
+                    <button class="btn btn-xs btn-primary" (click)="run()">运行</button>
+                </div>
+            </div>
+            <div class="panel-body" style="overflow-y: hidden;">
+                <textarea #textarea style="height: 100%; width: 100%;"></textarea>
+            </div>
+        </div>
+        <div #sandbox class="panel" style="height: 100%; width: 100%; padding: 10px;">
+            <!-- <iframe sandbox="allow-same-origin allow-scripts" style="height: 100%; width: 100%; border: 1px solid #ededed;
+            box-shadow: 3px 3px 8px rgba(0,0,0,0.2)"></iframe> -->
+        </div>
+    </div>
+</div>
